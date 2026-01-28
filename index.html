@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Divisha ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Georgia',serif;
+  background:linear-gradient(120deg,#ffd6e8,#ffffff);
+  color:#333;
+  text-align:center;
+}
+
+section{
+  min-height:100vh;
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+
+section.active{display:flex;}
+
+h1{
+  color:#c2185b;
+  font-size:2.6em;
+}
+
+p{
+  font-size:1.1em;
+  line-height:1.9;
+  max-width:650px;
+}
+
+button{
+  margin-top:30px;
+  padding:14px 34px;
+  border:none;
+  border-radius:30px;
+  background:#c2185b;
+  color:white;
+  font-size:1em;
+}
+
+img{
+  width:90%;
+  max-width:320px;
+  border-radius:18px;
+  margin:15px 0;
+  box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+audio{display:none;}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="Divisha2.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Screen 1 -->
+<section class="active">
+  <h1>Hi Divisha ❤️</h1>
+  <p>
+    This is not just a website.<br>
+    It’s something I made…<br>
+    only for you.
+  </p>
+  <button onclick="next()">Tap to begin</button>
+</section>
+
+<!-- Screen 2 -->
+<section>
+  <h1>Our Beginning ✨</h1>
+  <p>
+    We met on Snapchat.<br>
+    Just messages… just smiles…<br>
+    but somehow, my heart knew.
+  </p>
+  <button onclick="next()">Continue</button>
+</section>
+
+<!-- Screen 3 -->
+<section>
+  <h1>Our Moments 🤍</h1>
+  <p>
+    5 July 2024 — our first meet.<br>
+    13 July 2024 — our first date.<br>
+    Selangor & Johor — but one heart.
+  </p>
+  <button onclick="next()">Show memories</button>
+</section>
+
+<!-- Screen 4 -->
+<section>
+  <h1>Us 📸</h1>
+  <img src="IMG_5211.JPG">
+  <img src="IMG_2820.JPG">
+  <img src="Lo.JPG">
+  <button onclick="next()">One last thing…</button>
+</section>
+
+<!-- Screen 5 -->
+<section>
+  <h1>Divisha ❤️</h1>
+  <p>
+    Thank you for choosing me.<br><br>
+    You made my life softer,<br>
+    brighter,<br>
+    more meaningful.<br><br>
+    No matter the distance,<br>
+    my heart always walks toward you.
+  </p>
+
+  <button onclick="revealTamil()">Tap this ❤️</button>
+
+  <p id="tamilLine" style="
+    display:none;
+    margin-top:30px;
+    font-size:1.3em;
+    line-height:1.9;
+    color:#c2185b;
+  ">
+    நீ அருகில் இல்லாத நாட்களிலும்<br>
+    என் மனம் உன்னோடு தான் இருக்கிறது.
+  </p>
+
+  <h2 style="margin-top:40px;">I choose you. Always.</h2>
+</section>
+
+<script>
+let current = 0;
+const sections = document.querySelectorAll("section");
+
+function next(){
+  sections[current].classList.remove("active");
+  current++;
+  sections[current].classList.add("active");
+}
+
+function revealTamil(){
+  document.getElementById("tamilLine").style.display = "block";
+}
+</script>
+
+</body>
+</html>
