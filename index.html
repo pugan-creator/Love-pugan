@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Divisha ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(120deg, #ffd6e8, #ffffff);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #c2185b;
+      min-height: 1.5em;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 2s forwards 2s;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline {
+      text-align: left;
+      margin: 40px 0;
+    }
+
+    .event {
+      border-left: 3px solid #c2185b;
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+
+    .event span {
+      font-weight: bold;
+      color: #c2185b;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .letter {
+      margin-top: 50px;
+      font-size: 1.1em;
+      line-height: 1.9;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-style: italic;
+      color: #777;
+      font-size: 1.2em;
+    }
+
+    audio { display: none; }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: #ff4d6d;
+      animation: float 8s linear infinite;
+      font-size: 20px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Music -->
+<audio autoplay loop>
+  <source src="Divisha2.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1 id="type"></h1>
+  <div class="subtitle">I made this… just for you ❤️</div>
+
+  <div class="timeline fade">
+    <div class="event">
+      <span>📱 Where It All Began</span><br>
+      We met on Snapchat — and somehow, fate took over.
+    </div>
+    <div class="event">
+      <span>🤍 First Meet</span><br>
+      5 July 2024 — the moment you became my reality.
+    </div>
+    <div class="event">
+      <span>🌹 First Date</span><br>
+      13 July 2024 — my favorite memory.
+    </div>
+    <div class="event">
+      <span>📍 Long Distance</span><br>
+      Selangor & Johor — but one heart.
+    </div>
+  </div>
+
+  <div class="gallery fade">
+    <img src="IMG_2820.JPG">
+    <img src="IMG_5211.JPG">
+    <img src="IMG_5121.jpg">
+  </div>
+
+  <div class="letter fade">
+    <p>
+      Divisha, thank you for choosing me.
+      You didn’t just enter my life —
+      you changed it.
+    </p>
+    <p>
+      Every message, every call,
+      every smile from you
+      feels like home.
+    </p>
+    <p>
+      No matter how far we are,
+      my heart will always walk toward you.
+    </p>
+  </div>
+
+  <footer>
+    I love you, Divisha ❤️
+  </footer>
+</div>
+
+<script>
+  // Typing effect
+  const text = "For Divisha ❤️";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      document.getElementById("type").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, 120);
+    }
+  }
+  type();
+
+  // Fade on scroll
+  const fades = document.querySelectorAll('.fade');
+  window.addEventListener('scroll', () => {
+    fades.forEach(f => {
+      if (f.getBoundingClientRect().top < window.innerHeight - 50) {
+        f.classList.add('show');
+      }
+    });
+  });
+
+  // Floating hearts
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 8000);
+  }, 600);
+</script>
+
+</body>
+</html>
